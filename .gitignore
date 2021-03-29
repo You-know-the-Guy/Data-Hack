@@ -1,0 +1,5 @@
+# Python Env
+venv/
+
+# IDE crap
+.idea/
