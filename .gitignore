@@ -3,3 +3,7 @@ venv/
 
 # IDE crap
 .idea/
+src/__pycache__/
+
+# Filetypes
+*.png

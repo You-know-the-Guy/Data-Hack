@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+OUTPUT_PATH = "../images/"
 
 def graph_pics(name, info, pics):
     plt.plot(range(1, info["nb_pics"] + 1), pics[0], 'ko')
@@ -8,3 +9,4 @@ def graph_pics(name, info, pics):
     plt.title(name)
     plt.ylim(0, 1.5)
     plt.grid(b=True, which='both')
+    plt.savefig(OUTPUT_PATH + name)
