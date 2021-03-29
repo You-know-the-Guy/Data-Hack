@@ -3,7 +3,6 @@ Script python pour ouvrir les fichiers de traces de clavier
 
 """
 
-import matplotlib.pyplot as plt
 import numpy as np
 import time
 
@@ -59,33 +58,3 @@ def get_pics_from_file(filename):
     return tab_pics, info
 
 
-if __name__ == "__main__":
-
-    pics_nokey, info_nokey = get_pics_from_file("../data/pics_NOKEY.bin")
-    pics_pad0, info_pad0 = get_pics_from_file("../data/pics_0.bin")
-
-    ######### Pics ############
-
-    # NO KEY
-    plt.figure(1)
-    plt.subplot(211)
-    plt.plot(range(1, info_nokey["nb_pics"] + 1), pics_nokey[0], 'ko')
-    plt.xlabel('numéro de pic')
-    plt.ylabel('valeur du pic')
-    plt.title('no key')
-    plt.ylim(0, 1.5)
-    plt.grid(b=True, which='both')
-
-    # PAD-0
-    plt.figure(2)
-    plt.subplot(212)
-    plt.plot(range(1, info_pad0["nb_pics"] + 1), pics_pad0[0], 'ko')
-    plt.xlabel('numéro de pic')
-    plt.ylabel('valeur du pic')
-    plt.title('PAD-0')
-    plt.ylim(0, 1.5)
-    plt.grid(b=True, which='both')
-
-    #
-
-    plt.show()
